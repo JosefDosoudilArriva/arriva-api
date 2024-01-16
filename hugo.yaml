@@ -1,0 +1,100 @@
+# Hugo configuration file
+# baseURL: "http://127.0.0.1:5500/public"
+title: Arriva API Docs
+
+# Lang 
+
+defaultContentLanguage: en
+languages:
+  en:
+    languageName: English
+    weight: 1
+    title: ArrivAPI 
+  cs:
+    languageName: Czech
+    languageCode: cs
+    weight: 2
+    title: ArrivAPI
+
+# import hextra as module
+module:
+  imports:
+  - path: github.com/imfing/hextra
+
+markup:
+  # allow raw html
+  goldmark:
+    renderer:
+      unsafe: true
+
+  # enable hextra syntax highlight
+  highlight:
+    noClasses: false
+
+menu:
+  main:
+    - identifier: documentation
+      name: Documentation
+      pageRef: /docs
+      weight: 1
+    - identifier: about
+      name: About
+      pageRef: /about
+      weight: 2
+    - identifier: contact
+      name: Contact ↗
+      url: "https://github.com/ArrivaCZ"
+      weight: 3
+    - name: Search
+      weight: 4
+      params:
+        type: search
+    - name: GitHub
+      weight: 5
+      url: "https://github.com/ArrivaCZ"
+      params:
+        icon: github
+    - name: Twitter
+      weight: 6
+      url: "https://twitter.com/arrivacz"
+      params:
+        icon: x-twitter
+
+  sidebar:
+    - identifier: more
+      name: More
+      params:
+        type: separator
+      weight: 1
+    - name: "Blogs ↗"
+      url: "https://www.arriva.cz/cs/o-spolecnosti/novinky"
+      weight: 2
+    - name: "Arriva.cz ↗"
+      url: "https://www.arriva.cz/"
+      weight: 3
+   
+params:
+  description: Dokumentace k Arriva API.
+
+  navbar:
+    displayTitle: true
+    displayLogo: true
+    width: wide
+    
+  footer:
+    enable: true
+    displayCopyright: true
+    displayPoweredBy: true
+    width: normal
+
+    displayUpdatedDate: true
+    dateFormat: "January 2, 2006"
+
+  editURL:
+    enable: true
+    base: "https://github.com/ArrivaCZ"
+
+  theme:
+      # light | dark | system
+      default: system
+      displayToggle: true
