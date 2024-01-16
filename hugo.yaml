@@ -1,5 +1,6 @@
 # Hugo configuration file
-# baseURL: "http://127.0.0.1:5500/public"
+# Tady je problem s url
+baseUrl: .
 title: Arriva API Docs
 
 # Lang 
